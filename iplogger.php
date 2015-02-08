@@ -95,5 +95,5 @@ $ip = getRealIpAddr();
 $ua = getBrowser();
 $logdetails=date("d-m-Y H:i:s")."---{$ip}---{$ua['name']} {$ua['version']}---{$ua['platform']}\n";
 file_put_contents($file, $logdetails, FILE_APPEND | LOCK_EX);
-header($returnurl);
+header("Location: {$returnurl}");
 ?>
