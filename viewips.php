@@ -16,6 +16,19 @@
 .panel-body{
 	display: none;
 }
+body {
+background: url('http://fc07.deviantart.net/fs70/f/2013/174/3/e/recycled_texture_background_by_sandeep_m-d6aeau9.jpg')no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+z-index:-1;
+width:100%;
+height:100%;
+position:fixed;
+}
+  
+}
 </style>
 <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
@@ -53,20 +66,14 @@
 		$ipdatanew = explode("---", $ipdata);
 		echo "<tr>
 			<td>{$i}</td>
-			<td>{$ipdata[1]}</td>
-			<td>{$ipdata[2]}</td>
-			<td>{$ipdata[3]}</td>
-			<td>{$ipdata[0]}</td>
+			<td>{$ipdatanew[1]}</td>
+			<td>{$ipdatanew[2]}</td>
+			<td>{$ipdatanew[3]}</td>
+			<td>{$ipdatanew[0]}</td>
 		</tr>";
 		$i++;
 	}
 	?>
-	<tr>
-		<td>1</td>
-		<td>Kilgore</td>
-		<td>Trout</td>
-		<td>kilgore</td>
-	</tr>
 	</tbody>
 </table>
 </div>
