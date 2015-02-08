@@ -93,8 +93,7 @@ function getBrowser()
 
 $ip = getRealIpAddr();
 $ua = getBrowser();
-if (filter_var($ip, FILTER_VALIDATE_IP)) {
-$logdetails=date("F j, Y, g:i a").":{$ip}:{$ua['name']} $ua['version']:$ua['platform']";
+$logdetails=date("d-m-Y H:i:s")."---{$ip}---{$ua['name']} {$ua['version']}---{$ua['platform']}\n";
 file_put_contents($file, $logdetails, FILE_APPEND | LOCK_EX);
 header($returnurl);
 ?>
