@@ -63,15 +63,19 @@ position:fixed;
 	$ips = explode("\n", $file);
 	$i=1;
 	Foreach ($ips as $ipdata) {
-		$ipdatanew = explode("---", $ipdata);
-		echo "<tr>
-			<td>{$i}</td>
-			<td>{$ipdatanew[1]}</td>
-			<td>{$ipdatanew[2]}</td>
-			<td>{$ipdatanew[3]}</td>
-			<td>{$ipdatanew[0]}</td>
-		</tr>";
-		$i++;
+	$ipdatanew = explode("---", $ipdata);
+		if (isset($ipdatanew[0],$ipdatanew[1],$ipdatanew[2],$ipdatanew[3])) {
+			
+			echo "
+				<tr>
+				<td>{$i}</td>
+				<td>{$ipdatanew[1]}</td>
+				<td>{$ipdatanew[2]}</td>
+				<td>{$ipdatanew[3]}</td>
+				<td>{$ipdatanew[0]}</td>
+			</tr>";
+			$i++;
+		}
 	}
 	?>
 	</tbody>
