@@ -15,6 +15,9 @@ function getRealIpAddr() {
 	{
 		$ip=$_SERVER['REMOTE_ADDR'];
 	}
+	if(isset($_SERVER['CF-Connecting-IP'])){
+		$ip=$_SERVER['CF-Connecting-IP'];
+	}
 	return $ip;
 }
 
